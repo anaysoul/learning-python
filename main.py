@@ -14,8 +14,30 @@
 # print(len(name));
 
 # Variables
-name = input("What is your name? ");
-print(name);
+# name = input("What is your name? ");
+# print(name);
 
-name = "Jack";
-print(name);
+# name = "Jack";
+# print(name);
+
+# Variable exercise
+# 🚨 Don't change the code below 👇
+a = input("a: ")
+b = input("b: ")
+# 🚨 Don't change the code above 👆
+
+####################################
+#Write your code below this line 👇
+inputA = a;
+inputB = b;
+a = inputB;
+b = inputA;
+
+
+
+#Write your code above this line 👆
+####################################
+
+# 🚨 Don't change the code below 👇
+print("a: " + a)
+print("b: " + b)
