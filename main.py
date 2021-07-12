@@ -7,3 +7,8 @@ print("print('what to print')");
 print("Hello " + "Angela");
 
 # input function
+print("Hello " + input("What is your name? "));
+
+# challenge input function 
+name = input("What is your name? ");
+print(len(name));
