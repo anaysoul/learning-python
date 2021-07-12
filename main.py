@@ -49,15 +49,22 @@
 # print("Your rockstar band name is " + city + " " + pet + "!");
 
 # Project 2: Tip Calculator
-print("Welcome to the tip calculator bot!");
-total = input("What was the total bill?\n");
-split = input("How many people to split the bill?\n");
-tip = input("What percentage tip would you like to give? 10, 12, or 15?\n");
-total_number = int(total);
-split_number = int(split);
-tip_number = int(tip);
-# print(type(split));
-# print(type(tip));
-# print(type(total));
-tip_per_person = (total_number / split_number) * (tip_number/100);
-print("Each person should pay: $" + str(tip_per_person));
+# print("Welcome to the tip calculator bot!");
+# total = input("What was the total bill?\n");
+# split = input("How many people to split the bill?\n");
+# tip = input("What percentage tip would you like to give? 10, 12, or 15?\n");
+# total_number = int(total);
+# split_number = int(split);
+# tip_number = int(tip);
+# # print(type(split));
+# # print(type(tip));
+# # print(type(total));
+# tip_per_person = (total_number / split_number) * (tip_number/100);
+# print("Each person should pay: $" + str(tip_per_person));
+
+# Data Types Exercise
+two_digit_number = input("Type a two digit number: \n");
+a = int(two_digit_number[0]);
+b = int(two_digit_number[1]);
+ab = str(a + b);
+print(str(a) + " + " + str(b) + " = " + ab );
