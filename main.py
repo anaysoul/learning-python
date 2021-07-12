@@ -42,8 +42,16 @@
 # print("a: " + a)
 # print("b: " + b)
 
-# Project 1: Band Name Generator
-print("Greetings to the Band Name Generator bot!");
-city = input("What city did you grow up in?\n");
-pet = input("What is the name of your pet?\n")
-print("Your rockstar band name is " + city + " " + pet + "!");
+# # Project 1: Band Name Generator
+# print("Greetings to the Band Name Generator bot!");
+# city = input("What city did you grow up in?\n");
+# pet = input("What is the name of your pet?\n")
+# print("Your rockstar band name is " + city + " " + pet + "!");
+
+# Project 2: Tip Calculator
+print("Welcome to the tip calculator bot!");
+total = input("What was the total bill?\n");
+split = input("How many people to split the bill?\n");
+tip = input("What percentage tip would you like to give? 10, 12, or 15?\n");
+tip_per_person = (total/split) * Num(tip);
+print("Each person should pay: $" + tip_per_person);
