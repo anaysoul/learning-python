@@ -42,4 +42,8 @@
 # print("a: " + a)
 # print("b: " + b)
 
-# variable nami
+# Project 1: Band Name Generator
+print("Greetings to the Band Name Generator bot!");
+city = input("What city did you grow up in?\n");
+pet = input("What is the name of your pet?\n")
+print("Your rockstar band name is " + city + " " + pet + "!");
