@@ -138,7 +138,7 @@
 #     print(f"Your BMI is {BMI} and you are clinically obese!!!");
 
 # Day 3.3 Leap year
-year = int(input("Which year do you want to check? "))
+# year = int(input("Which year do you want to check? "))
 # if year % 4 == 0:
 #     print("Leap Year!")    
 # elif year % 100 == 0:
@@ -149,14 +149,34 @@ year = int(input("Which year do you want to check? "))
 #     print("Not Leap Year!")
 
 # instructor solution
-if year % 4 == 0:  
-    if year % 100 == 0:
-        if year % 400 == 0:
-            print("leap year")
-        else:
-            print("not leap year!") 
-    else:
-        print("Leap year!")
-else:
-    print("Not Leap Year!")
+# if year % 4 == 0:  
+#     if year % 100 == 0:
+#         if year % 400 == 0:
+#             print("leap year")
+#         else:
+#             print("not leap year!") 
+#     else:
+#         print("Leap year!")
+# else:
+#     print("Not Leap Year!")
 
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? \n"));
+bill = 0
+
+if height > 120:
+    print("You can ride the rollercoaster!\n")
+    age = int(input("What is your age?\n"))
+    if age < 12:
+        bill = 5
+    elif age <= 18:
+        bill = 7
+    else:
+        bill = 12
+
+    wants_photo = input("Do you want a photo taken? Y or N \n")
+    if wants_photo == "Y":
+        bill += 3
+    print(f"Your total bill due is ${bill}.")
+else:
+    print("Sorry, shorty!")
