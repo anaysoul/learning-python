@@ -49,17 +49,17 @@
 # print("Your rockstar band name is " + city + " " + pet + "!");
 
 # Project 2: Tip Calculator
-print("Welcome to the tip calculator bot!");
-total = float(input("What was the total bill?\n"));
-split = int(input("How many people to split the bill?\n"));
-tip = int(input("What percentage tip would you like to give? 10, 12, or 15?\n"));
-# print(type(split));
-# print(type(tip));
-# print(type(total));
-tip_amount = total* (tip/100);
-tip_per_person = (total + tip_amount) / split;
-tip_per_person = "{:.2f}".format(tip_per_person);
-print(f"Each person should pay: ${tip_per_person}");
+# print("Welcome to the tip calculator bot!");
+# total = float(input("What was the total bill?\n"));
+# split = int(input("How many people to split the bill?\n"));
+# tip = int(input("What percentage tip would you like to give? 10, 12, or 15?\n"));
+# # print(type(split));
+# # print(type(tip));
+# # print(type(total));
+# tip_amount = total* (tip/100);
+# tip_per_person = (total + tip_amount) / split;
+# tip_per_person = "{:.2f}".format(tip_per_person);
+# print(f"Each person should pay: ${tip_per_person}");
 
 # Data Types Exercise
 # two_digit_number = input("Type a two digit number: \n");
@@ -88,3 +88,35 @@ print(f"Each person should pay: ${tip_per_person}");
 # weeks = (remaining_years * 52);
 # months = (remaining_years * 12);
 # print(f"You have {days} days, {weeks} weeks and {months} months left!");
+
+# Control flow of if/else statements
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? \n"));
+
+# if height > 120:
+#     print("You can ride the rollercoaster!")
+# else:
+#     print("Sorry, shorty!")
+
+# Exercise 3.1: Odd or Even
+number = int(input("Which number do you want to check? \n"));
+if number % 2 == 0:
+    print("This is an even number.")
+else:
+    print("This is an odd number")
+
+# Nested if/else statements and elif
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? \n"));
+
+if height > 120:
+    print("You can ride the rollercoaster!")
+    age = int(input("What is your age?"))
+    if age < 12:
+        print("Please pay $5!")
+    elif age <= 18:
+        print("Please pay $7!")
+    else:
+        print ("Pay $12!");
+else:
+    print("Sorry, shorty!")
