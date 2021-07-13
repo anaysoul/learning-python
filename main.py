@@ -182,12 +182,12 @@
 #     print("Sorry, shorty!")
 
 # Exercise 3.4 Pizza Order
-print("Welcome to Python Pizza Deliveries!")
-size = input("What size pizza do you want? S, M, or L \n")
-add_pepperoni = input("do you want pepperoni? Y or N \n")
-extra_cheese = input("Do you want extra cheese? Y or N \n")
+# print("Welcome to Python Pizza Deliveries!")
+# size = input("What size pizza do you want? S, M, or L \n")
+# add_pepperoni = input("do you want pepperoni? Y or N \n")
+# extra_cheese = input("Do you want extra cheese? Y or N \n")
 
-bill = 0
+# bill = 0
 # if size == "S":
 #     bill = 15
 #     if add_pepperoni == "Y":
@@ -209,20 +209,73 @@ bill = 0
 # print(f"Your final bill is: ${bill}")
 
 # instructor solution 
-if size == "S":
-    bill += 15
-elif size == "M":
-    bill += 20
+# if size == "S":
+#     bill += 15
+# elif size == "M":
+#     bill += 20
+# else:
+#     bill += 25
+
+# if add_pepperoni == "Y":
+#     if size == "S":
+#         bill += 2 
+#     else:
+#         bill += 3
+
+# if extra_cheese == "Y":
+#     bill += 1
+
+# print(f"Your final bill is ${bill}")
+
+# Logical operators 
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? \n"));
+# bill = 0
+
+# if height > 120:
+#     print("You can ride the rollercoaster!\n")
+#     age = int(input("What is your age?\n"))
+#     if age < 12:
+#         bill = 5
+#     elif age <= 18:
+#         bill = 7
+#     elif age >= 45 and age <= 55:
+#         print("Everything is going to be ok! Enjoy a free ride on us! :)")
+#     else:
+#         bill = 12
+
+#     wants_photo = input("Do you want a photo taken? Y or N \n")
+#     if wants_photo == "Y":
+#         bill += 3
+#     print(f"Your total bill due is ${bill}.")
+# else:
+#     print("Sorry, shorty!")
+
+# 3.5 Love Calculator
+print("Welcome to the Love Calculator!\n")
+name1 = input("What is your name?\n")
+name2 = input("What is their name?\n")
+
+combined_string = name1 + name2
+lower_case_string = combined_string.lower()
+
+t = lower_case_string.count("t")
+r = lower_case_string.count("r") 
+u = lower_case_string.count("u")
+e = lower_case_string.count("e") 
+l = lower_case_string.count("l")
+o = lower_case_string.count("o") 
+v = lower_case_string.count("v") 
+
+true = t + r + u + e
+love = l + o + v + e
+
+love_score = str(true) + str(love)
+total_love_score = int(love_score)
+
+if total_love_score < 10 or total_love_score > 90:
+    print(f"Your score is {love_score}, you go together like coke and mentos.")
+elif total_love_score >= 40 and total_love_score <= 50:
+    print(f"Your score is {love_score}, you are alright together.")
 else:
-    bill += 25
-
-if add_pepperoni == "Y":
-    if size == "S":
-        bill += 2 
-    else:
-        bill += 3
-
-if extra_cheese == "Y":
-    bill += 1
-
-print(f"Your final bill is ${bill}")
+    print(f"Your score is {love_score}.")
