@@ -319,10 +319,23 @@
 # else:
 #     print("GAME OVER!")
 
-import random
+# import random
 
-randomInteger = random.randint(0, 1)
-if (randomInteger == 0):
-    print("Tails")
-else:
-    print("Heads")
+# randomInteger = random.randint(0, 1)
+# if (randomInteger == 0):
+#     print("Tails")
+# else:
+#     print("Heads")
+
+# Lists
+# states_of_america = ["Delaware", "Pennsylvania", "Maryland"]
+
+# Banker Roulette - who will pay the bill?
+import random 
+
+names_string = input("Give me everyones names, seperated by a comma. ")
+names = names_string.split(",")
+
+dice = random.randint(0, len(names) - 1 );
+print(f"{names[dice]} will pay the bill today!")
+print(f"{random.choice(names)} will pay the bill");
