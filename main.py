@@ -251,31 +251,70 @@
 # else:
 #     print("Sorry, shorty!")
 
-# 3.5 Love Calculator
-print("Welcome to the Love Calculator!\n")
-name1 = input("What is your name?\n")
-name2 = input("What is their name?\n")
+# # 3.5 Love Calculator
+# print("Welcome to the Love Calculator!\n")
+# name1 = input("What is your name?\n")
+# name2 = input("What is their name?\n")
 
-combined_string = name1 + name2
-lower_case_string = combined_string.lower()
+# combined_string = name1 + name2
+# lower_case_string = combined_string.lower()
 
-t = lower_case_string.count("t")
-r = lower_case_string.count("r") 
-u = lower_case_string.count("u")
-e = lower_case_string.count("e") 
-l = lower_case_string.count("l")
-o = lower_case_string.count("o") 
-v = lower_case_string.count("v") 
+# t = lower_case_string.count("t")
+# r = lower_case_string.count("r") 
+# u = lower_case_string.count("u")
+# e = lower_case_string.count("e") 
+# l = lower_case_string.count("l")
+# o = lower_case_string.count("o") 
+# v = lower_case_string.count("v") 
 
-true = t + r + u + e
-love = l + o + v + e
+# true = t + r + u + e
+# love = l + o + v + e
 
-love_score = str(true) + str(love)
-total_love_score = int(love_score)
+# love_score = str(true) + str(love)
+# total_love_score = int(love_score)
 
-if total_love_score < 10 or total_love_score > 90:
-    print(f"Your score is {love_score}, you go together like coke and mentos.")
-elif total_love_score >= 40 and total_love_score <= 50:
-    print(f"Your score is {love_score}, you are alright together.")
+# if total_love_score < 10 or total_love_score > 90:
+#     print(f"Your score is {love_score}, you go together like coke and mentos.")
+# elif total_love_score >= 40 and total_love_score <= 50:
+#     print(f"Your score is {love_score}, you are alright together.")
+# else:
+#     print(f"Your score is {love_score}.")
+
+# Day 3 Project: Treasure Island
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+direction = input("left or right?")
+if (direction == "left"):
+    motion = input("swim or wait?")
+    if (motion == "wait"):
+        door = input("Which door?")
+    else:
+        print("GAME over!")
+    if (door == "yellow"):
+        print("You Win!")
+    else:
+        print("Game Over!")
 else:
-    print(f"Your score is {love_score}.")
+    print("GAME OVER!")
