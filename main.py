@@ -160,23 +160,69 @@
 # else:
 #     print("Not Leap Year!")
 
-print("Welcome to the rollercoaster!")
-height = int(input("What is your height in cm? \n"));
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? \n"));
+# bill = 0
+
+# if height > 120:
+#     print("You can ride the rollercoaster!\n")
+#     age = int(input("What is your age?\n"))
+#     if age < 12:
+#         bill = 5
+#     elif age <= 18:
+#         bill = 7
+#     else:
+#         bill = 12
+
+#     wants_photo = input("Do you want a photo taken? Y or N \n")
+#     if wants_photo == "Y":
+#         bill += 3
+#     print(f"Your total bill due is ${bill}.")
+# else:
+#     print("Sorry, shorty!")
+
+# Exercise 3.4 Pizza Order
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L \n")
+add_pepperoni = input("do you want pepperoni? Y or N \n")
+extra_cheese = input("Do you want extra cheese? Y or N \n")
+
 bill = 0
+# if size == "S":
+#     bill = 15
+#     if add_pepperoni == "Y":
+#         bill += 2
+#     if extra_cheese == "Y":
+#         bill += 1
+# elif size == "M":
+#     bill = 20
+#     if add_pepperoni == "Y":
+#         bill += 3
+#     if extra_cheese == "Y":
+#         bill += 1
+# elif size == "L":
+#     bill = 25
+#     if add_pepperoni == "Y":
+#         bill += 3
+#     if extra_cheese == "Y":
+#         bill += 1
+# print(f"Your final bill is: ${bill}")
 
-if height > 120:
-    print("You can ride the rollercoaster!\n")
-    age = int(input("What is your age?\n"))
-    if age < 12:
-        bill = 5
-    elif age <= 18:
-        bill = 7
-    else:
-        bill = 12
-
-    wants_photo = input("Do you want a photo taken? Y or N \n")
-    if wants_photo == "Y":
-        bill += 3
-    print(f"Your total bill due is ${bill}.")
+# instructor solution 
+if size == "S":
+    bill += 15
+elif size == "M":
+    bill += 20
 else:
-    print("Sorry, shorty!")
+    bill += 25
+
+if add_pepperoni == "Y":
+    if size == "S":
+        bill += 2 
+    else:
+        bill += 3
+
+if extra_cheese == "Y":
+    bill += 1
+
+print(f"Your final bill is ${bill}")
