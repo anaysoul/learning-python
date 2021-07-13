@@ -98,25 +98,41 @@
 # else:
 #     print("Sorry, shorty!")
 
-# Exercise 3.1: Odd or Even
-number = int(input("Which number do you want to check? \n"));
-if number % 2 == 0:
-    print("This is an even number.")
-else:
-    print("This is an odd number")
+# # Exercise 3.1: Odd or Even
+# number = int(input("Which number do you want to check? \n"));
+# if number % 2 == 0:
+#     print("This is an even number.")
+# else:
+#     print("This is an odd number")
 
-# Nested if/else statements and elif
-print("Welcome to the rollercoaster!")
-height = int(input("What is your height in cm? \n"));
+# # Nested if/else statements and elif
+# print("Welcome to the rollercoaster!")
+# height = int(input("What is your height in cm? \n"));
 
-if height > 120:
-    print("You can ride the rollercoaster!")
-    age = int(input("What is your age?"))
-    if age < 12:
-        print("Please pay $5!")
-    elif age <= 18:
-        print("Please pay $7!")
-    else:
-        print ("Pay $12!");
+# if height > 120:
+#     print("You can ride the rollercoaster!")
+#     age = int(input("What is your age?"))
+#     if age < 12:
+#         print("Please pay $5!")
+#     elif age <= 18:
+#         print("Please pay $7!")
+#     else:
+#         print ("Pay $12!");
+# else:
+#     print("Sorry, shorty!")
+
+# BMI 2.0 
+height = float(input("What is your height in m? "))
+weight = float(input("What is your weight in kg? "))
+BMI = round(weight / (height ** 2.0))
+
+if BMI <= 18.5:
+    print(f"Your BMI is {BMI}; you are underweight.")
+elif BMI < 25:
+    print(f"Your BMI is {BMI}; you hava a normal weight");
+elif BMI < 30: 
+    print(f"Your BMI is {BMI}; you are overweight!")
+elif BMI < 35:
+    print(f"Your BMI is {BMI}; you are obese!!")
 else:
-    print("Sorry, shorty!")
+    print(f"Your BMI is {BMI} and you are clinically obese!!!");
