@@ -331,11 +331,51 @@
 # states_of_america = ["Delaware", "Pennsylvania", "Maryland"]
 
 # Banker Roulette - who will pay the bill?
-import random 
+# import random 
 
-names_string = input("Give me everyones names, seperated by a comma. ")
-names = names_string.split(",")
+# names_string = input("Give me everyones names, seperated by a comma. ")
+# names = names_string.split(",")
 
-dice = random.randint(0, len(names) - 1 );
-print(f"{names[dice]} will pay the bill today!")
-print(f"{random.choice(names)} will pay the bill");
+# dice = random.randint(0, len(names) - 1 );
+# print(f"{names[dice]} will pay the bill today!")
+# print(f"{random.choice(names)} will pay the bill");
+
+# Treasure Map exercise
+# 🚨 Don't change the code below 👇
+row1 = ["⬜️","⬜️","⬜️"]
+row2 = ["⬜️","⬜️","⬜️"]
+row3 = ["⬜️","⬜️","⬜️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+# 🚨 Don't change the code above 👆
+
+#Write your code below this row 👇
+horizontal = int(position[0])
+vertical = int(position[1])
+
+map[vertical - 1][horizontal - 1] = "x"
+
+
+
+
+
+# Write your code above this row 👆
+
+# 🚨 Don't change the code below 👇
+print(f"{row1}\n{row2}\n{row3}")
+
+# Exercise 5.1 Average Height
+student_heights = input("Inpur a list of student heights ").split()
+for n in range(0, len(student_heights)):
+    student_heights[n] = int(student_heights[n])
+print(student_heights)
+
+total_heights = 0
+counter = 0
+for height in student_heights:
+    total_heights += height
+    counter += 1
+print(total_heights)
+avg_height = round(total_heights / counter)
+print(avg_height)
