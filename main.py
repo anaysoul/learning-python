@@ -366,37 +366,37 @@
 # print(f"{row1}\n{row2}\n{row3}")
 
 # Rock-paper-scissors project
-import random
+# import random
 
-rock = '''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-'''
+# rock = '''
+#     _______
+# ---'   ____)
+#       (_____)
+#       (_____)
+#       (____)
+# ---.__(___)
+# '''
 
-paper = '''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-'''
+# paper = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#           _______)
+#          _______)
+# ---.__________)
+# '''
 
-scissors = '''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-'''
+# scissors = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#        __________)
+#       (____)
+# ---.__(___)
+# '''
 
-user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. "))
-computer_choice = random.randint(0,2)
+# user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. "))
+# computer_choice = random.randint(0,2)
 # if user_choice == 0:
 #     print(rock)
 # elif user_choice == 1:
@@ -435,25 +435,25 @@ computer_choice = random.randint(0,2)
 #     print("Draw!")
 
 #instructor solution
-game_images = [rock, paper, scissors]
-print("User Choice: ")
-if user_choice >= 3 or user_choice < 0:
-    print("You typed an invalid number, you lose!") 
-else:
-    print(game_images[user_choice])
+# game_images = [rock, paper, scissors]
+# print("User Choice: ")
+# if user_choice >= 3 or user_choice < 0:
+#     print("You typed an invalid number, you lose!") 
+# else:
+#     print(game_images[user_choice])
 
-    print(f"Computer Choice: {game_images[computer_choice]}")
+#     print(f"Computer Choice: {game_images[computer_choice]}")
 
-    if (user_choice == 0 and computer_choice == 2):
-        print("You Win!")
-    elif computer_choice == 0 and user_choice == 2:
-        print("You Lose!")
-    elif computer_choice > user_choice:
-        print("You Lose!")
-    elif user_choice > computer_choice:
-        print("You Win!")
-    elif computer_choice == user_choice:
-        print("Draw!")
+#     if (user_choice == 0 and computer_choice == 2):
+#         print("You Win!")
+#     elif computer_choice == 0 and user_choice == 2:
+#         print("You Lose!")
+#     elif computer_choice > user_choice:
+#         print("You Lose!")
+#     elif user_choice > computer_choice:
+#         print("You Win!")
+#     elif computer_choice == user_choice:
+#         print("Draw!")
 
 
 
@@ -471,3 +471,13 @@ else:
 # print(total_heights)
 # avg_height = round(total_heights / counter)
 # print(avg_height)
+
+# 5.2 highest score
+# student_scores = [78, 65, 89, 96, 55, 91, 64, 89]
+# high_score = 0 
+# for score in student_scores:
+#     if (score > high_score):
+#         high_score = score
+# print(f"The highest score in the class is: {high_score}")
+
+
