@@ -342,19 +342,19 @@
 
 # Treasure Map exercise
 # 🚨 Don't change the code below 👇
-row1 = ["⬜️","⬜️","⬜️"]
-row2 = ["⬜️","⬜️","⬜️"]
-row3 = ["⬜️","⬜️","⬜️"]
-map = [row1, row2, row3]
-print(f"{row1}\n{row2}\n{row3}")
-position = input("Where do you want to put the treasure? ")
+# row1 = ["⬜️","⬜️","⬜️"]
+# row2 = ["⬜️","⬜️","⬜️"]
+# row3 = ["⬜️","⬜️","⬜️"]
+# map = [row1, row2, row3]
+# print(f"{row1}\n{row2}\n{row3}")
+# position = input("Where do you want to put the treasure? ")
 # 🚨 Don't change the code above 👆
 
 #Write your code below this row 👇
-horizontal = int(position[0])
-vertical = int(position[1])
+# horizontal = int(position[0])
+# vertical = int(position[1])
 
-map[vertical - 1][horizontal - 1] = "x"
+# map[vertical - 1][horizontal - 1] = "x"
 
 
 
@@ -363,19 +363,111 @@ map[vertical - 1][horizontal - 1] = "x"
 # Write your code above this row 👆
 
 # 🚨 Don't change the code below 👇
-print(f"{row1}\n{row2}\n{row3}")
+# print(f"{row1}\n{row2}\n{row3}")
+
+# Rock-paper-scissors project
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors. "))
+computer_choice = random.randint(0,2)
+# if user_choice == 0:
+#     print(rock)
+# elif user_choice == 1:
+#     print(paper)
+# elif user_choice == 2:
+#     print(scissors)
+# else:
+#     print("Please make sure you choose 0 for Rock, 1 for Paper or 2 for Scissors. ")
+# print("Computer's choice: ")
+# if computer_choice == 0:
+#     print(rock)
+# elif computer_choice == 1:
+#     print(paper)
+# elif computer_choice == 2:
+#     print(scissors)
+# else:
+#     print("Please make sure you choose 0 for Rock, 1 for Paper or 2 for Scissors. ")
+
+# if (user_choice == 0 and computer_choice == 0):
+#     print("Draw!")
+# if (user_choice == 0 and computer_choice == 1):
+#     print("computer wins")
+# if (user_choice == 0 and computer_choice == 2):
+#     print("user wins")
+# if (user_choice == 1 and computer_choice == 0):
+#     print("user wins")
+# if (user_choice == 1 and computer_choice == 1):
+#     print("Draw!")
+# if (user_choice == 1 and computer_choice == 2):
+#     print("computer wins")
+# if (user_choice == 2 and computer_choice == 0):
+#     print("computer wins")
+# if (user_choice == 2 and computer_choice == 1):
+#     print("user wins")
+# if (user_choice == 2 and computer_choice == 2):
+#     print("Draw!")
+
+#instructor solution
+game_images = [rock, paper, scissors]
+print("User Choice: ")
+if user_choice >= 3 or user_choice < 0:
+    print("You typed an invalid number, you lose!") 
+else:
+    print(game_images[user_choice])
+
+    print(f"Computer Choice: {game_images[computer_choice]}")
+
+    if (user_choice == 0 and computer_choice == 2):
+        print("You Win!")
+    elif computer_choice == 0 and user_choice == 2:
+        print("You Lose!")
+    elif computer_choice > user_choice:
+        print("You Lose!")
+    elif user_choice > computer_choice:
+        print("You Win!")
+    elif computer_choice == user_choice:
+        print("Draw!")
+
+
 
 # Exercise 5.1 Average Height
-student_heights = input("Inpur a list of student heights ").split()
-for n in range(0, len(student_heights)):
-    student_heights[n] = int(student_heights[n])
-print(student_heights)
+# student_heights = input("Inpur a list of student heights ").split()
+# for n in range(0, len(student_heights)):
+#     student_heights[n] = int(student_heights[n])
+# print(student_heights)
 
-total_heights = 0
-counter = 0
-for height in student_heights:
-    total_heights += height
-    counter += 1
-print(total_heights)
-avg_height = round(total_heights / counter)
-print(avg_height)
+# total_heights = 0
+# counter = 0
+# for height in student_heights:
+#     total_heights += height
+#     counter += 1
+# print(total_heights)
+# avg_height = round(total_heights / counter)
+# print(avg_height)
