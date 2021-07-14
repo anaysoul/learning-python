@@ -484,9 +484,25 @@
 # for number in range(1, 11, 3):
 #     print(number)
 
-total = 0
-for number in range(1, 101):
-    total += number
-print(total)
+# total = 0
+# for number in range(1, 101):
+#     total += number
+# print(total)
 
-#
+# 5.3 Adding evens
+# total = 0 
+# for number in range(1, 101):
+#     if (number % 2 == 0):
+#         total += number
+# print(f"The sum of all even numbers is {total}")
+
+# 5.4 Fizz Buzz 
+for num in range(1, 101):
+    if (num % 3 == 0 and num % 5 == 0):
+        print("FizzBuzz")
+    elif (num % 3 == 0):
+        print("Fizz")
+    elif (num % 5 == 0):
+        print("Buzz")
+    else:
+        print(num)
