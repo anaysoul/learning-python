@@ -692,4 +692,18 @@ def encrypt(plain_text, shift_amount):
     ##🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
 
 #TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
-encrypt(plain_text = text, shift_amount = shift)
+
+
+def decrypt(cipher_text, shift_amount):
+    plain_text = ""
+    for letter in cipher_text:
+        position = alphabet.index(letter)
+        new_position = position - shift_amount
+        new_letter = alphabet[new_position]
+        plain_text += new_letter
+    print(f"The decrypted message is {plain_text}")
+
+if direction == "encode":
+    encrypt(plain_text = text, shift_amount = shift)
+elif direction == "decode":
+    decrypt(cipher_text = text, shift_amount = shift)
