@@ -632,8 +632,19 @@
 #     # Display hangman
 #     print(stages[lives])
 
-def greeting(name, location):
-    print(f"Hello {name}")
-    print(f"What is it like in {location}?")
+# def greeting(name, location):
+#     print(f"Hello {name}")
+#     print(f"What is it like in {location}?")
 
-greeting(name="Jack Bauer", location="nowhere")
+# greeting(name="Jack Bauer", location="nowhere")
+
+# Calculate area
+import math
+
+def paint_calc(height, width, cover):
+    area = (height * width) 
+    num_of_cans = math.ceil(area / cover)
+    print(f"You'll need {num_of_cans} cans of paint to cover {cover} sq meters of area")
+
+coverage = 5
+paint_calc(3, 9, coverage)
