@@ -639,12 +639,27 @@
 # greeting(name="Jack Bauer", location="nowhere")
 
 # Calculate area
-import math
+# import math
 
-def paint_calc(height, width, cover):
-    area = (height * width) 
-    num_of_cans = math.ceil(area / cover)
-    print(f"You'll need {num_of_cans} cans of paint to cover {cover} sq meters of area")
+# def paint_calc(height, width, cover):
+#     area = (height * width) 
+#     num_of_cans = math.ceil(area / cover)
+#     print(f"You'll need {num_of_cans} cans of paint to cover {cover} sq meters of area")
 
-coverage = 5
-paint_calc(3, 9, coverage)
+# coverage = 5
+# paint_calc(3, 9, coverage)
+
+#  prime number checker
+
+def prime_checker(number):
+    prime = True
+    for num in range(2, number - 1):
+        if number % num == 0:    
+            prime = False
+    if(prime == True):
+        print("It is a prime number")
+    else:
+        print("It is not a prime number")
+
+n = int(input("Check this number: "))
+prime_checker(number = n)
