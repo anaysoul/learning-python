@@ -575,12 +575,109 @@
 #     random_pw += char 
 # print(random_pw)
 
-print("Hello")
-num_char = len("Hello")
-print(num_char)
+# print("Hello")
+# num_char = len("Hello")
+# print(num_char)
 
-def my_function():
-    print("Hello")
-    print("Bye")
+# def my_function():
+#     print("Hello")
+#     print("Bye")
 
-my_function()
+
+import random
+
+stages = ['''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+''', '''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========
+''']
+
+# my_function()
+word_list = ["ardvark", "baboon", "camel"]
+chosen_word = random.choice(word_list)
+end_of_game = False
+word_length = len(chosen_word)
+lives = 6
+
+#Testing code
+print(f"Psst, the solution is {chosen_word}") 
+
+# Create blanks
+display = []
+for char in range(word_length):
+    display.append("_")
+print(display)
+
+
+while not end_of_game:
+    guess = input("Guess a letter: ").lower()
+
+    #Check guessed letter
+    for position in range(word_length):
+        letter = chosen_word[position]
+        if letter == guess:
+            display[position] = guess
+    if guess not in chosen_word:
+        lives -= 1
+        print(f"Lives: {lives}")
+        if lives == 0:
+            end_of_game = True
+            print("You lose!")
+    print(display)
+    if "_" not in display:
+        end_of_game = True
+        print("You win!")
+    # Display hangman
+    print(stages[lives])
+
