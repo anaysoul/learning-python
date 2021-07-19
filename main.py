@@ -663,38 +663,84 @@
 
 # n = int(input("Check this number: "))
 # prime_checker(number = n)
-from art import logo
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+# from art import logo
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-print(logo)
+# print(logo)
 
-def caesar(text, shift, direction):
-    new_text = ""
-    shift %= 26
-    for char in text:
-        if char in alphabet: 
-            position = alphabet.index(char)
-            if direction == "encode":
-                new_position = position + shift
-            elif direction == "decode":
-                new_position = position - shift
-            new_letter = alphabet[new_position]
-            new_text += new_letter
-        else:
-            new_text += char
-    print(f"The {direction}d message is {new_text}")
+# def caesar(text, shift, direction):
+#     new_text = ""
+#     shift %= 26
+#     for char in text:
+#         if char in alphabet: 
+#             position = alphabet.index(char)
+#             if direction == "encode":
+#                 new_position = position + shift
+#             elif direction == "decode":
+#                 new_position = position - shift
+#             new_letter = alphabet[new_position]
+#             new_text += new_letter
+#         else:
+#             new_text += char
+#     print(f"The {direction}d message is {new_text}")
 
-should_contine = True
-while should_contine:
-    direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-    text = input("Type your message:\n").lower()
-    shift = int(input("Type the shift number:\n"))
-    caesar(text, shift, direction)
-    result = input("Type 'y' if you want to go again. Otherwise type 'n'. " )
-    if result == "y":
-        sould_contine = True
+# should_contine = True
+# while should_contine:
+#     direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+#     text = input("Type your message:\n").lower()
+#     shift = int(input("Type the shift number:\n"))
+#     caesar(text, shift, direction)
+#     result = input("Type 'y' if you want to go again. Otherwise type 'n'. " )
+#     if result == "y":
+#         sould_contine = True
+#     else:
+#         should_contine = False
+#         print("Goodbye!")
+
+# Dictionaries
+programming_dict = {
+    "bug": "an error in a program",
+    "function": "code that is called over and over again",
+    "loop": "action of doing something over and over again"
+}
+
+print(programming_dict["function"])
+
+# adding new items to dictionary
+programming_dict["dict"] = "contains key, value pairs of info"
+print(programming_dict)
+
+# create an empty dictionary
+empty_dict = {}
+
+# wipe an exisiting dictionary
+# programming_dict = {}
+# print(programming_dict)
+
+# edit an item in a dictionary
+programming_dict["bug"] = "a moth in your computer"
+
+# loop through a dictionary
+for key in programming_dict:
+    print(key)
+    print(programming_dict[key])
+
+student_score = {
+    "Harry": 81,
+    "Ron": 78,
+    "Hermione": 99,
+    "Draco": 74,
+    "Neville": 62
+}
+
+student_grades = {}
+for key in student_score:
+    if student_score[key] > 90:
+        student_grades[key] = "Outstanding"
+    elif student_score[key] > 80:
+        student_grades[key] = "Exceeds Expectations"
+    elif student_score[key] > 70:
+        student_grades[key] = "Acceptable"
     else:
-        should_contine = False
-        print("Goodbye!")
-
-
+        student_grades[key] = "Failing"
+print(student_grades)
