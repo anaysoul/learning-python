@@ -744,3 +744,30 @@ for key in student_score:
     else:
         student_grades[key] = "Failing"
 print(student_grades)
+
+# Nesting
+capitals = {
+    "France": "Paris",
+    "Germany": "Berlin"
+}
+
+# Nesting Dictionary in a Dictionary
+travel_log = {
+    "France": {"cities_visited":["Paris, Lille, Dijon"], "total_visits": 12},
+    "Germany": {"cities_visited":["Berlin, Hamburg, Stuttgart"], "total_visits":3}
+}
+print(travel_log)
+
+# Nesting dictionary in a list
+travel_log = [
+    {
+        "country": "France", 
+        "cities_visited":["Paris, Lille, Dijon"], 
+        "total_visits": 12
+    },
+    {
+        "country": "Germany",
+        "cities_visited":["Berlin, Hamburg, Stuttgart"],
+        "total_visits":3
+    }
+]
