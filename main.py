@@ -698,76 +698,118 @@
 #         print("Goodbye!")
 
 # Dictionaries
-programming_dict = {
-    "bug": "an error in a program",
-    "function": "code that is called over and over again",
-    "loop": "action of doing something over and over again"
-}
+# programming_dict = {
+#     "bug": "an error in a program",
+#     "function": "code that is called over and over again",
+#     "loop": "action of doing something over and over again"
+# }
 
-print(programming_dict["function"])
+# print(programming_dict["function"])
 
-# adding new items to dictionary
-programming_dict["dict"] = "contains key, value pairs of info"
-print(programming_dict)
-
-# create an empty dictionary
-empty_dict = {}
-
-# wipe an exisiting dictionary
-# programming_dict = {}
+# # adding new items to dictionary
+# programming_dict["dict"] = "contains key, value pairs of info"
 # print(programming_dict)
 
-# edit an item in a dictionary
-programming_dict["bug"] = "a moth in your computer"
+# # create an empty dictionary
+# empty_dict = {}
 
-# loop through a dictionary
-for key in programming_dict:
-    print(key)
-    print(programming_dict[key])
+# # wipe an exisiting dictionary
+# # programming_dict = {}
+# # print(programming_dict)
 
-student_score = {
-    "Harry": 81,
-    "Ron": 78,
-    "Hermione": 99,
-    "Draco": 74,
-    "Neville": 62
-}
+# # edit an item in a dictionary
+# programming_dict["bug"] = "a moth in your computer"
 
-student_grades = {}
-for key in student_score:
-    if student_score[key] > 90:
-        student_grades[key] = "Outstanding"
-    elif student_score[key] > 80:
-        student_grades[key] = "Exceeds Expectations"
-    elif student_score[key] > 70:
-        student_grades[key] = "Acceptable"
-    else:
-        student_grades[key] = "Failing"
-print(student_grades)
+# # loop through a dictionary
+# for key in programming_dict:
+#     print(key)
+#     print(programming_dict[key])
 
-# Nesting
-capitals = {
-    "France": "Paris",
-    "Germany": "Berlin"
-}
+# student_score = {
+#     "Harry": 81,
+#     "Ron": 78,
+#     "Hermione": 99,
+#     "Draco": 74,
+#     "Neville": 62
+# }
 
-# Nesting Dictionary in a Dictionary
-travel_log = {
-    "France": {"cities_visited":["Paris, Lille, Dijon"], "total_visits": 12},
-    "Germany": {"cities_visited":["Berlin, Hamburg, Stuttgart"], "total_visits":3}
-}
-print(travel_log)
+# student_grades = {}
+# for key in student_score:
+#     if student_score[key] > 90:
+#         student_grades[key] = "Outstanding"
+#     elif student_score[key] > 80:
+#         student_grades[key] = "Exceeds Expectations"
+#     elif student_score[key] > 70:
+#         student_grades[key] = "Acceptable"
+#     else:
+#         student_grades[key] = "Failing"
+# print(student_grades)
 
-# Nesting dictionary in a list
-travel_log = [
-    {
-        "country": "France", 
-        "cities_visited":["Paris, Lille, Dijon"], 
-        "total_visits": 12
-    },
-    {
-        "country": "Germany",
-        "cities_visited":["Berlin, Hamburg, Stuttgart"],
-        "total_visits":3
-    }
-]
+# # Nesting
+# capitals = {
+#     "France": "Paris",
+#     "Germany": "Berlin"
+# }
+
+# # Nesting Dictionary in a Dictionary
+# travel_log = {
+#     "France": {"cities_visited":["Paris, Lille, Dijon"], "total_visits": 12},
+#     "Germany": {"cities_visited":["Berlin, Hamburg, Stuttgart"], "total_visits":3}
+# }
+# print(travel_log)
+
+# # Nesting dictionary in a list
+# travel_log = [
+#     {
+#         "country": "France", 
+#         "cities_visited":["Paris, Lille, Dijon"], 
+#         "total_visits": 12
+#     },
+#     {
+#         "country": "Germany",
+#         "cities_visited":["Berlin, Hamburg, Stuttgart"],
+#         "total_visits":3
+#     }
+# ]
+
+# def add_new_country(country, cities_visited, total_visits):
+#     travel_log.append({
+#         "country": country,
+#         "total_visits": total_visits,
+#         "cities_visited": cities_visited
+#     })
+# # add_new_country(country = "Russia", cities_visited = ["Moscow", "Saint Petersburg"], total_visits = 2)
+# add_new_country("Russia", ["Moscow", "Saint Petersburg"], 2)
+# print(travel_log)
+
+# Silent Bid Auction
+from gavel import logo
+import os
+print(logo)
+
+bidding = True
+all_bids = {}
+
+def find_highest_bidder(bidding_record):
+    # {"Angela": 23, "Jane": 12}
+    highest_bid = 0
+    winner = ""
+    for bidder in bidding_record:
+        bid_amount = bidding_record[bidder]
+        if bid_amount > highest_bid:
+            highest_bid = bid_amount
+            winner = bidder
+    print(f"The winner is {winner} with a bid of ${highest_bid}")
+
+while bidding:
+    name = input("What is your name? ")
+    bid = float(input("What is your bid? $"))
+    all_bids[name] = bid
+    reply = input("Are there other users who want to bid? (Y or N): ")
+    if(reply == "N"):
+        bidding = False
+        find_highest_bidder(all_bids)
+    elif (reply == "Y"):
+        bidding = True
+        os.system("clear")
+print(all_bids)
