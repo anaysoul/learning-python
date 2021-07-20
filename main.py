@@ -783,33 +783,42 @@
 # print(travel_log)
 
 # Silent Bid Auction
-from gavel import logo
-import os
-print(logo)
+# from gavel import logo
+# import os
+# print(logo)
 
-bidding = True
-all_bids = {}
+# bidding = True
+# all_bids = {}
 
-def find_highest_bidder(bidding_record):
-    # {"Angela": 23, "Jane": 12}
-    highest_bid = 0
-    winner = ""
-    for bidder in bidding_record:
-        bid_amount = bidding_record[bidder]
-        if bid_amount > highest_bid:
-            highest_bid = bid_amount
-            winner = bidder
-    print(f"The winner is {winner} with a bid of ${highest_bid}")
+# def find_highest_bidder(bidding_record):
+#     # {"Angela": 23, "Jane": 12}
+#     highest_bid = 0
+#     winner = ""
+#     for bidder in bidding_record:
+#         bid_amount = bidding_record[bidder]
+#         if bid_amount > highest_bid:
+#             highest_bid = bid_amount
+#             winner = bidder
+#     print(f"The winner is {winner} with a bid of ${highest_bid}")
 
-while bidding:
-    name = input("What is your name? ")
-    bid = float(input("What is your bid? $"))
-    all_bids[name] = bid
-    reply = input("Are there other users who want to bid? (Y or N): ")
-    if(reply == "N"):
-        bidding = False
-        find_highest_bidder(all_bids)
-    elif (reply == "Y"):
-        bidding = True
-        os.system("clear")
-print(all_bids)
+# while bidding:
+#     name = input("What is your name? ")
+#     bid = float(input("What is your bid? $"))
+#     all_bids[name] = bid
+#     reply = input("Are there other users who want to bid? (Y or N): ")
+#     if(reply == "N"):
+#         bidding = False
+#         find_highest_bidder(all_bids)
+#     elif (reply == "Y"):
+#         bidding = True
+#         os.system("clear")
+# print(all_bids)
+
+# Functions
+def format_name(f_name, l_name):
+    return f_name.title() + " " + l_name.title() 
+
+print(format_name("soul", "lakew"))
+
+output = len("yellow")
+print(output)
