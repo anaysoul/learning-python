@@ -815,10 +815,87 @@
 # print(all_bids)
 
 # Functions
-def format_name(f_name, l_name):
-    return f_name.title() + " " + l_name.title() 
+# def format_name(f_name, l_name):
+#     if f_name == "" or l_name == "":
+#         return "Please enter first and last name"
+#     return f_name.title() + " " + l_name.title() 
 
-print(format_name("soul", "lakew"))
+# print(format_name("soul", "lakew"))
 
-output = len("yellow")
-print(output)
+# output = len("yellow")
+# print(output)
+
+# # 10.1 Leap Year Exercise
+# def is_leap(year):
+#   if year % 4 == 0:
+#     if year % 100 == 0:
+#       if year % 400 == 0:
+#         return True
+#       else:
+#         return False
+#     else:
+#       return True
+#   else:
+#     return False
+
+# def days_in_month(year, month):
+#   month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]  
+#   if is_leap(year) and month == 2:
+#       return 29
+#   return month_days[month - 1]
+
+  
+# #🚨 Do NOT change any of the code below 
+# year = int(input("Enter a year: "))
+# month = int(input("Enter a month: "))
+# days = days_in_month(year, month)
+# print(days)
+
+# Calculator App
+from calc import logo
+
+print(logo)
+
+# functions
+# add
+def add(n1, n2):
+    return (n1 + n2)
+# multiply
+def multiply(n1, n2):
+    return n1 * n2
+# divide
+def divide(n2, n1):
+    return n2 / n1
+# subtract
+def subtract(n2, n1):
+    return n2 - n1
+
+# dictionary
+operations = {
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide
+}
+
+num1 = int(input("What is the first number?: "))
+num2 = int(input("What is the second number?: "))
+
+# print each operation symbols
+for symbol in operations:
+    print(symbol)
+
+operation = input("What is the operation to be performed?: ")
+
+answer = ""
+if operation == "+":
+    answer = add(num1, num2)
+elif operation == "-":
+    answer = subtract(num1, num2)
+elif operation == "*":
+    answer = multiply(num1, num2)
+elif operation == "/":
+    answer = divide(num1, num2)
+else:
+    print("Please select the correct operation to be performed")
+print(f"{num1} {operation} {num2} = {answer}")
