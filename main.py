@@ -887,15 +887,18 @@ for symbol in operations:
 
 operation = input("What is the operation to be performed?: ")
 
-answer = ""
-if operation == "+":
-    answer = add(num1, num2)
-elif operation == "-":
-    answer = subtract(num1, num2)
-elif operation == "*":
-    answer = multiply(num1, num2)
-elif operation == "/":
-    answer = divide(num1, num2)
-else:
-    print("Please select the correct operation to be performed")
+calculation_function = operations[operation]
+answer = calculation_function(num1, num2)
+
+# answer = ""
+# if operation == "+":
+#     answer = add(num1, num2)
+# elif operation == "-":
+#     answer = subtract(num1, num2)
+# elif operation == "*":
+#     answer = multiply(num1, num2)
+# elif operation == "/":
+#     answer = divide(num1, num2)
+# else:
+#     print("Please select the correct operation to be performed")
 print(f"{num1} {operation} {num2} = {answer}")
