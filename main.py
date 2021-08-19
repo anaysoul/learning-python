@@ -47,3 +47,10 @@ def increase_enemies():
 
 increase_enemies()
 print(f"Enemies outside function: {enemies}")
+
+#global constants define and not change again
+
+PI = 3.14159
+URL = "http://www.python.org"
+
+
