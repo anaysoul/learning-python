@@ -854,8 +854,6 @@
 # Calculator App
 from calc import logo
 
-print(logo)
-
 # functions
 # add
 def add(n1, n2):
@@ -878,27 +876,25 @@ operations = {
     "/": divide
 }
 
-num1 = int(input("What is the first number?: "))
-num2 = int(input("What is the second number?: "))
+def calculator():
+    print(logo)
 
-# print each operation symbols
-for symbol in operations:
-    print(symbol)
+    num1 = float(input("What is the first number?: "))
+        # print each operation symbols
+    for symbol in operations:
+        print(symbol)
+    should_continue = True
+    while(should_continue):
+        operation = input("What is the operation to be performed?: ")
+        num2 = float(input("What is the next number?: "))
+        calculation_function = operations[operation]
+        answer = calculation_function(num1, num2)
+        print(f"{num1} {operation} {num2} = {answer}") 
+        if input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: " ) == 'y':
+            num1 = answer
+        else:
+            should_continue = False
+            calculator()
 
-operation = input("What is the operation to be performed?: ")
-
-calculation_function = operations[operation]
-answer = calculation_function(num1, num2)
-
-# answer = ""
-# if operation == "+":
-#     answer = add(num1, num2)
-# elif operation == "-":
-#     answer = subtract(num1, num2)
-# elif operation == "*":
-#     answer = multiply(num1, num2)
-# elif operation == "/":
-#     answer = divide(num1, num2)
-# else:
-#     print("Please select the correct operation to be performed")
-print(f"{num1} {operation} {num2} = {answer}")
+calculator()
+    
