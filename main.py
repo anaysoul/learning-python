@@ -26,3 +26,15 @@ def game():
     drink_potion()
 
 print(player_health)
+
+# if 3 > 2:
+#     a_variable = 10
+
+# There is no block scope for python
+game_level = 3
+def create_enemy():
+    enemies = ["Skeleton", "Zombie", "Alien"]
+    if game_level < 5:
+        new_enemy = enemies[0]
+
+    print(new_enemy)
